@@ -1,0 +1,22 @@
+{
+  "name": "nss_libs_types",
+  "version": "1.0.0",
+  "description": "Type definitions for the REDM helper library nss_libs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc && npx tsc --outDir ../../[krueger]/krueger_blackjack/client/ui/nss_libs_types"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NIGHTSHIFT-STUDIO/nss_libs_types.git"
+  },
+  "author": "systemNEO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NIGHTSHIFT-STUDIO/nss_libs_types/issues"
+  },
+  "homepage": "https://github.com/NIGHTSHIFT-STUDIO/nss_libs_types#readme",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}
