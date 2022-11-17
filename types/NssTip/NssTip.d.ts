@@ -34,6 +34,10 @@ export class NssTip extends NssUiComponentInterface implements NssUiComponentInt
      */
     private _position;
     /**
+     * @private
+     */
+    private _initializeOtherComponents;
+    /**
      * @param {number} new_duration_in_ms
      * @return {NssTip}
      */

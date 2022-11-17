@@ -22,6 +22,10 @@ export class NssSimpleTextEditor extends NssUiComponentInterface implements NssU
      */
     private _placeholder_text;
     /**
+     * @private
+     */
+    private _initializeOtherComponents;
+    /**
      * @return NssSimpleTextEditor
      */
     start(): NssSimpleTextEditor;

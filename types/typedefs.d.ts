@@ -6,4 +6,5 @@ type NssUiComponents = {
     NssSvgReplacer?: NssSvgReplacer;
     NssTextBox?: NssTextBox;
     NssTip?: NssTip;
+    NssPadLock?: NssPadLock;
 };

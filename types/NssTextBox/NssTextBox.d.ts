@@ -36,6 +36,10 @@ export class NssTextBox extends NssUiComponentInterface implements NssUiComponen
     /**
      * @private
      */
+    private _initializeOtherComponents;
+    /**
+     * @private
+     */
     private _createDom;
     /**
      * @type {HTMLDivElement}

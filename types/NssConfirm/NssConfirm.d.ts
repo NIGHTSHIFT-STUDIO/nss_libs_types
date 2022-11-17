@@ -59,6 +59,10 @@ export class NssConfirm extends NssUiComponentInterface implements NssUiComponen
      */
     private _is_danger;
     /**
+     * @private
+     */
+    private _initializeOtherComponents;
+    /**
      * @return {NssConfirm}
      */
     setDanger(): NssConfirm;
