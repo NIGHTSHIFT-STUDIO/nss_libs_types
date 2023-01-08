@@ -7,7 +7,12 @@ export class NssResponsive extends NssUiComponentInterface implements NssUiCompo
      */
     updateScreenWidthFactorDebounceClocked: Function;
     updateScreenWidthFactor(): void;
-    debounceClocked(callback: any, interval_in_ms: any): () => void;
+    /**
+     * @param {function} callback
+     * @param {number} interval_in_ms
+     * @return {(function(): void)|*}
+     */
+    debounceClocked(callback: Function, interval_in_ms: number): (() => void) | any;
     /**
      * @return {boolean}
      * @private

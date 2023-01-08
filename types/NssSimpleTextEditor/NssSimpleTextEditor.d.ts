@@ -1,7 +1,7 @@
 /**
- * @implements {NssUiComponentInterface}
+ * @extends {NssUiComponent}
  */
-export class NssSimpleTextEditor extends NssUiComponentInterface implements NssUiComponentInterface {
+export class NssSimpleTextEditor extends NssUiComponent {
     /**
      * @param {HTMLElement|Node|Element} target_el
      */
@@ -21,10 +21,6 @@ export class NssSimpleTextEditor extends NssUiComponentInterface implements NssU
      * @private
      */
     private _placeholder_text;
-    /**
-     * @private
-     */
-    private _initializeOtherComponents;
     /**
      * @return NssSimpleTextEditor
      */
@@ -81,5 +77,5 @@ export class NssSimpleTextEditor extends NssUiComponentInterface implements NssU
      */
     isErrorHandlingSuccessful(): boolean;
 }
-import { NssUiComponentInterface } from "../NssUiComponentInterface.js";
+import { NssUiComponent } from "../NssUiComponent.js";
 import { NssSimpleTextEditorSection } from "./NssSimpleTextEditorSection.js";

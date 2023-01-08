@@ -1,7 +1,7 @@
 /**
- * @implements {NssUiComponentInterface}
+ * @extends {NssUiComponent}
  */
-export class NssTip extends NssUiComponentInterface implements NssUiComponentInterface {
+export class NssTip extends NssUiComponent {
     static POSITIONS: {
         TOP_LEFT: string;
         TOP_CENTER: string;
@@ -33,10 +33,6 @@ export class NssTip extends NssUiComponentInterface implements NssUiComponentInt
      * @private
      */
     private _position;
-    /**
-     * @private
-     */
-    private _initializeOtherComponents;
     /**
      * @param {number} new_duration_in_ms
      * @return {NssTip}
@@ -83,4 +79,4 @@ export class NssTip extends NssUiComponentInterface implements NssUiComponentInt
      */
     show(): Promise<any>;
 }
-import { NssUiComponentInterface } from "../NssUiComponentInterface.js";
+import { NssUiComponent } from "../NssUiComponent.js";

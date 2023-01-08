@@ -7,6 +7,10 @@ export class NssUiApi {
     static NssTextBox: string;
     static NssTip: string;
     static NssPadLock: string;
+    static NssClient: string;
+    static NssModal: string;
+    static NssAudio: string;
+    static NssLoadingIndicator: string;
     /**
      * @param {string} resource_name
      */

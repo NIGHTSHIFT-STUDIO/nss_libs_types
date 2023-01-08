@@ -1,9 +1,9 @@
 /**
- * @implements {NssUiComponentInterface}
+ * @extends {NssUiComponent}
  */
-export class NssSvgReplacer extends NssUiComponentInterface implements NssUiComponentInterface {
+export class NssSvgReplacer extends NssUiComponent {
     static getStyleFilenames(): any[];
     setupImageObserver(): void;
     loadSvg(url: any, img_el: any): void;
 }
-import { NssUiComponentInterface } from "../NssUiComponentInterface.js";
+import { NssUiComponent } from "../NssUiComponent.js";

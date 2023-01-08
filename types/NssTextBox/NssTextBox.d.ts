@@ -1,7 +1,7 @@
 /**
- * @implements {NssUiComponentInterface}
+ * @extends {NssUiComponent}
  */
-export class NssTextBox extends NssUiComponentInterface implements NssUiComponentInterface {
+export class NssTextBox extends NssUiComponent {
     static CSS_VISIBLE: string;
     static CSS_TEXT_SMALL: string;
     static CSS_TEXT_DEFAULT: string;
@@ -33,10 +33,6 @@ export class NssTextBox extends NssUiComponentInterface implements NssUiComponen
      * @private
      */
     private _no_wrap;
-    /**
-     * @private
-     */
-    private _initializeOtherComponents;
     /**
      * @private
      */
@@ -133,4 +129,4 @@ export class NssTextBox extends NssUiComponentInterface implements NssUiComponen
      */
     setText(value: string): NssTextBox;
 }
-import { NssUiComponentInterface } from "../NssUiComponentInterface.js";
+import { NssUiComponent } from "../NssUiComponent.js";

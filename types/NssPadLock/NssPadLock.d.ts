@@ -1,7 +1,7 @@
 /**
- * @implements {NssUiComponentInterface}
+ * @extends {NssUiComponent}
  */
-export class NssPadLock extends NssUiComponentInterface implements NssUiComponentInterface {
+export class NssPadLock extends NssUiComponent {
     /**
      * @param {string} code
      */
@@ -63,20 +63,46 @@ export class NssPadLock extends NssUiComponentInterface implements NssUiComponen
      */
     private _audio_path;
     /**
+     * @type {NssAudio}
+     * @private
+     */
+    private _audio_player;
+    /**
      * @type {number}
      * @private
      */
     private _time_penalty_in_ms;
+    /**
+     * @type {string}
+     * @private
+     */
+    private _translation_unlock;
+    /**
+     * @type {string}
+     * @private
+     */
+    private _translation_lock;
+    /**
+     * @type {boolean}
+     * @private
+     */
+    private _is_automation_disabled;
+    /**
+     * @param {string} new_translation
+     * @return {NssPadLock}
+     */
+    setTranslationUnlock(new_translation: string): NssPadLock;
+    /**
+     * @param {string} new_translation
+     * @return {NssPadLock}
+     */
+    setTranslationLock(new_translation: string): NssPadLock;
     /**
      * For dev usage only.
      * @param {string} path
      * @return {NssPadLock}
      */
     setAudioPath(path: string): NssPadLock;
-    /**
-     * @private
-     */
-    private _initializeOtherComponents;
     /**
      * @private
      */
@@ -124,6 +150,10 @@ export class NssPadLock extends NssUiComponentInterface implements NssUiComponen
      */
     private _unlock_btn_container_el;
     /**
+     * @return {NssPadLock}
+     */
+    disableAutomation(): NssPadLock;
+    /**
      * @private
      */
     private _resetAnimTimeoutId;
@@ -146,6 +176,14 @@ export class NssPadLock extends NssUiComponentInterface implements NssUiComponen
      * @return {Promise<void>}
      */
     shake(): Promise<void>;
+    /**
+     * @return {NssPadLock}
+     */
+    disableButtons(): NssPadLock;
+    /**
+     * @return {NssPadLock}
+     */
+    enableButtons(): NssPadLock;
     /**
      * @return {Promise<void>}
      */
@@ -237,21 +275,5 @@ export class NssPadLock extends NssUiComponentInterface implements NssUiComponen
      * @private
      */
     private _playAudioClick;
-    /**
-     * @private
-     */
-    private _resetAudio;
-    /**
-     * @param {string} filename
-     * @param {boolean} prevent_reset
-     * @return {Promise<void>}
-     * @private
-     */
-    private _playAudio;
-    /**
-     * @type {HTMLAudioElement}
-     * @private
-     */
-    private _audio;
 }
-import { NssUiComponentInterface } from "../NssUiComponentInterface.js";
+import { NssUiComponent } from "../NssUiComponent.js";

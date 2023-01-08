@@ -58,6 +58,10 @@ export class NssButton {
      */
     unsetBorderless(): NssButton;
     /**
+     * @return {boolean}
+     */
+    isDisabled(): boolean;
+    /**
      * @return {NssButton}
      */
     setDisabled(): NssButton;
@@ -156,4 +160,14 @@ export class NssButton {
      * @return {HTMLDivElement}
      */
     getWrapperEl(): HTMLDivElement;
+    /**
+     * @return {NssButton}
+     * @private
+     */
+    private _playHoverAudio;
+    /**
+     * @return {NssButton}
+     * @private
+     */
+    private _playClickAudio;
 }

@@ -1,7 +1,7 @@
 /**
- * @implements {NssUiComponentInterface}
+ * @extends {NssUiComponent}
  */
-export class NssConfirm extends NssUiComponentInterface implements NssUiComponentInterface {
+export class NssConfirm extends NssUiComponent {
     static TEMPLATE_MODAL: string;
     static TEMPLATE_DIALOG: string;
     /**
@@ -59,10 +59,6 @@ export class NssConfirm extends NssUiComponentInterface implements NssUiComponen
      */
     private _is_danger;
     /**
-     * @private
-     */
-    private _initializeOtherComponents;
-    /**
      * @return {NssConfirm}
      */
     setDanger(): NssConfirm;
@@ -79,12 +75,17 @@ export class NssConfirm extends NssUiComponentInterface implements NssUiComponen
      */
     private _dialog_el;
     /**
-     * @type {HTMLButtonElement}
+     * @type {HTMLElement}
+     * @private
+     */
+    private _buttons_container_el;
+    /**
+     * @type {NssButton}
      * @private
      */
     private _yes_btn;
     /**
-     * @type {HTMLButtonElement}
+     * @type {NssButton}
      * @private
      */
     private _no_btn;
@@ -130,4 +131,4 @@ export class NssConfirm extends NssUiComponentInterface implements NssUiComponen
      */
     private _destroy;
 }
-import { NssUiComponentInterface } from "../NssUiComponentInterface.js";
+import { NssUiComponent } from "../NssUiComponent.js";
